@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('hello', 'HelloController@index');
+
+
+
+Route::get('hello','HelloController@index');
+Route::post('hello', 'HelloController@post');
