@@ -10,7 +10,8 @@ use Illuminate\Http\Response;
 class HelloController extends Controller 
 {
 
-	public function index(Request $request) {
+	public function index(Request $request) 
+         {
            return view('hello.index', ['msg'=>'フォームを入力:']);
        
        }
@@ -18,7 +19,7 @@ class HelloController extends Controller
        public function post(Request $request)
        {
              $validate_rule = [
-                'name' => 'requuired',
+                'name' => 'required',
                 'mail' => 'email',
                 'age'  => 'numeric|between:0,150',
             ];
