@@ -31,12 +31,8 @@ class HelloController extends Controller
     }
    
     public function create(Request $request) {
-          $param = [
-            'name' => $request->name,
-            'mail' => $request->mail,
-            'age' => $request->age,
-           ];
-           DB::insert('insert into people (name, mail, age) values (:name, ;mail, :age)',$param);
+          
+           DB::insert('insert into people (name, mail, age) values (:name, ;mail, :age)');
           return redirect('/hello');
     }
             
