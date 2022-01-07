@@ -1,6 +1,5 @@
 <?php
 
-namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -32,7 +31,7 @@ class PeopleTableSeeder extends Seeder
         $param = [
            'name' => 'sachiko',
            'mail' => 'sachiko@happy.jp',
-           'age'  => 56,
+           'age'  => 43,
         ];
        DB::table('people')->insert($param);
     }
