@@ -1,4 +1,4 @@
-@extends('layouts.helloap')
+@extends('layouts.helloapp')
 
 @section('title', 'Board.index')
 
