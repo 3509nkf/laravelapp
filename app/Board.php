@@ -12,11 +12,18 @@ class Board extends Model
       public static $rules = array (
         'person_id' => 'required',
         'title' => 'required',
-        'message' => 'required'
+        'message' => 'required',
+        'name' => 'required'
       );
 
       public function getData()
       {
-           return $this->id . ': ' . $this->title;
+           return $this->id . ': ' . $this->title . '(' . $this->person->name . ')';
       }
+
+      public function person() {
+      	return $this->belongsTo('App\Person');
+      }
+  
+  
 }
