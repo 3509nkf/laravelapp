@@ -21,9 +21,6 @@ class Board extends Model
            return $this->id . ': ' . $this->title . '(' . $this->person->name . ')';
       }
 
-      public function person() {
-      	return $this->belongsTo('App\Person');
-      }
-  
+      
   
 }
