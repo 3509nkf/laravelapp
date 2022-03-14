@@ -20,6 +20,10 @@ class Board extends Model
       {
            return $this->id . ': ' . $this->title . '(' . $this->name . ')';
       }
+     
+      public function person() {
+      	return $this->belongsTo('App\Person');
+      }
 
       
   

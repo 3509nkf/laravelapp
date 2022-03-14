@@ -9,26 +9,11 @@
 
 @section('content')
 	<table>
-	<tr><th>Person</th><th>Board</th></tr>
-        @foreach ($hasItems as $item)
+	<tr><th>Message</th><th>Name</th></tr>
+        @foreach ($items as $item)
 		<tr>
-                    <td>{{$item->getData()}}</td>
-                    <td>
-                        <table width="100%">
-                        @foreach ($item->boards as $obj)
-                            <tr><td>{{$obj->getData()}}</td></tr>
-                        @endreach
-                        </table>
-                    </td>
-                </tr>
-        @endforeach
-        </table>
-        <div style = "margin:10px;"></div>
-        <table>
-        <tr><th>Person</th></tr>
-        @foreach ($noItems as $item)
-        	<tr> 
-                 	<td>{{$item->getData()}}</td>
+                    <td>{{$item->message}}</td>
+                    <td>{{$item->person->name}}</td>
                 </tr>
         @endforeach
         </table>
