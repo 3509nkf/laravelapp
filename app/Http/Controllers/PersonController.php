@@ -8,10 +8,8 @@ use Illuminate\Http\Request;
 class PersonController extends Controller
 {
     public function index(Request $request) {
-       $hasItems = Person::has('boards')->get();
-       $notItems = Person::doesntHave('boards')->get();
-       $param = ['hasItems' => $hasItems, 'noItems' => $notItems];
-       return view('person.index', compact('param'));
+       $items = Person::all(); //peopleテーブルの全レコードを得る
+       return view('person.index', ['items' => $items]);
     }
     public function find(Request $request) {
       return view('person.find',['input' => '']);
