@@ -13,7 +13,7 @@
         @foreach ($items as $item)
 		<tr>
                     <td>{{$item->message}}</td>
-                    <td>{{$item->person->name}}</td>
+                    <td>{{$item->name}}</td>
                 </tr>
         @endforeach
         </table>
